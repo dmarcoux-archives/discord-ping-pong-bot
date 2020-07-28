@@ -1,9 +1,9 @@
-FROM rust:1.44.0-slim-buster
-MAINTAINER Dany Marcoux
+# Compile a completely static Rust binary
+FROM ekidd/rust-musl-builder:1.44.0 AS build
+ADD --chown=rust:rust . .
+RUN cargo build --release
 
-# The base image initializes rustup with the "minimal" profile, so we're adding
-# the components we need to develop
-RUN rustup component add rustfmt clippy
-
-# Start the application
-CMD cargo run
+# Copy the binary into an empty image
+FROM scratch
+COPY --from=build /home/rust/src/target/x86_64-unknown-linux-musl/release/discord-ping-pong-bot /
+CMD ["/discord-ping-pong-bot"]
