@@ -16,8 +16,10 @@ quite impressive!
    server. Follow this [guide](https://www.writebots.com/discord-bot-token/) for
    details.
 
-2. Run the bot with Docker:
+2. Run the bot with Docker (TODO: Having to login to pull the image is annoying. Publish to Docker Hub instead):
 ```
+docker login docker.pkg.github.com --username dmarcoux
+docker pull docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
 docker run --detach --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
 ```
 
