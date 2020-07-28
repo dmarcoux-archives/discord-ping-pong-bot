@@ -1,27 +1,5 @@
-# <a href="https://github.com/dmarcoux/rust_templates">dmarcoux/rust_templates</a>
+# <a href="https://github.com/dmarcoux/discord-ping-pong-bot">dmarcoux/discord-ping-pong-bot</a>
 
-Templates for common files/configs I use in Rust projects.
-
-## .gitignore
-
-It changes whether the project is a library or a binary.
-Details in the file.
-
-## rustfmt
-
-Format Rust code according to style guidelines.
-Details in [rustfmt.toml](./rustfmt.toml).
-
-## rust-toolchain
-
-Pin the project to a specific Rust version.
-Details [here](https://github.com/rust-lang/rustup.rs#the-toolchain-file).
-
-## [Dependabot](https://dependabot.com/)
-
-Automated dependency updates.
-
-## [CircleCI](https://circleci.com/)
-
-Linters, tests and more.
-Details in the [config](./.circleci/config.yml).
+My first Discord bot with [serenity](https://github.com/serenity-rs/serenity).
+The code is from [serenity's examples](https://github.com/serenity-rs/serenity/tree/7dd01eb95754dcdc71cea8e744e2fedacd3ab9dd/examples/e01_basic_ping_bot).
+To create the Discord token for my bot, I followed this [guide](https://www.writebots.com/discord-bot-token/).
