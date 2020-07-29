@@ -20,7 +20,7 @@ already quite impressive!
 ```
 docker login docker.pkg.github.com --username dmarcoux
 docker pull docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
-docker run --detach --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
+docker run --detach --restart always --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
 ```
 
 ### Publish Docker Image to GitHub Package Registry
