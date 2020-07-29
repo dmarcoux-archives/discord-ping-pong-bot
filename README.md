@@ -6,8 +6,8 @@ My first Discord bot with [serenity](https://github.com/serenity-rs/serenity).
 The code is from [serenity's
 examples](https://github.com/serenity-rs/serenity/tree/7dd01eb95754dcdc71cea8e744e2fedacd3ab9dd/examples/e01_basic_ping_bot).
 
-It responds to direct `ping` messages with `pong`. Nothing more, it's already
-quite impressive!
+It responds to `ping` messages (on all channels) with `pong`. Nothing more, it's
+already quite impressive!
 
 ### Setup Bot
 
