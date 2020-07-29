@@ -16,34 +16,28 @@ already quite impressive!
    server. Follow this [guide](https://www.writebots.com/discord-bot-token/) for
    details.
 
-2. Run the bot with Docker (TODO: Having to login to pull the image is annoying. Publish to Docker Hub instead):
+2. Run the bot with Docker:
 ```
-docker login docker.pkg.github.com --username dmarcoux
-docker pull docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
-docker run --detach --restart always --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
+docker pull danymarcoux/discord-ping-pong-bot:latest
+docker run --detach --restart always --env DISCORD_TOKEN=YOUR_DISCORD_TOKEN danymarcoux/discord-ping-pong-bot:latest
 ```
 
-### Publish Docker Image to GitHub Package Registry
+### Publish Docker Image to Docker Hub Registry
 
-1. Create a [personal access token](https://github.com/settings/tokens) with the
-scopes:
-  - `read:packages`
-  - `write:packages`
-  - `delete:packages`
-  - `repo` (only needed for private repositories)
+1. Create an [access token](https://hub.docker.com/settings/security) for Docker
+   Hub
 
-2. Login to the Github Package registry with the personal access token (it will
-   prompt...):
+2. Login to the Docker Hub registry with the access token (it will prompt...):
 ```
-docker login docker.pkg.github.com --username dmarcoux
+docker login --username danymarcoux
 ```
 
 3. Build Docker image and tag it:
 ```
-docker build --tag docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest .
+docker build --tag danymarcoux/discord-ping-pong-bot:latest .
 ```
 
-4. Publish Docker image to GitHub Package registry:
+4. Publish Docker image to Docker Hub registry:
 ```
-docker push docker.pkg.github.com/dmarcoux/discord-ping-pong-bot/bot:latest
+docker push danymarcoux/discord-ping-pong-bot:latest
 ```
